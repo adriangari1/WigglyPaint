@@ -2,7 +2,7 @@
 <!-- saved from url=(0030)https://wigglypaint.com/wiggly -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>WigglyPaint</title><style>body{background:#000!important;}</style><script>(function(){var _lastBlob=null;var _orig=URL.createObjectURL.bind(URL);URL.createObjectURL=function(b){_lastBlob=b;return _orig(b);};document.addEventListener("click",function(e){  var el=e.target;  while(el&&el.tagName!=="A")el=el.parentElement;  if(el&&el.download&&el.download.toLowerCase().endsWith(".gif")&&_lastBlob){    window.__wigglypaintExportGif=new Blob([_lastBlob],{type:"image/gif"});    window.parent.postMessage({type:"wigglypaint:gifExport",filename:el.download},"*");  }},true);})();</script></head><body>
+<title>WigglyPaint</title><style>body{background:transparent!important;}</style><script>(function(){var _lastBlob=null;var _orig=URL.createObjectURL.bind(URL);URL.createObjectURL=function(b){_lastBlob=b;return _orig(b);};document.addEventListener("click",function(e){  var el=e.target;  while(el&&el.tagName!=="A")el=el.parentElement;  if(el&&el.download&&el.download.toLowerCase().endsWith(".gif")&&_lastBlob){    window.__wigglypaintExportGif=new Blob([_lastBlob],{type:"image/gif"});    window.parent.postMessage({type:"wigglypaint:gifExport",filename:el.download},"*");  }},true);})();</script></head><body>
 	<script type="text/plain" language="decker">
 
 {deck}
@@ -1201,19 +1201,20 @@ end
 		}
 
 		body {
-			background: black;
+			background: transparent !important;
 			margin: 0;
+			padding: 0;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center; /* Cambiado para centrar perfecto */
 			-webkit-user-select: none;
 			user-select: none;
-		}
-
-		body {
 			touch-action: none;
 			overflow: hidden;
+			width: 100vw;
+			height: 100vh
 		}
+
 	</style>
 	<script>
 
