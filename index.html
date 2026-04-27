@@ -8262,7 +8262,7 @@ transition[on BoxOut     c a b t do  c.rect[c.size/2   c.size*1-t "center"]     
 		}
 		resize = _ => {
 			const b = q('body'), screen = rect(b.clientWidth, b.clientHeight), fs = min(screen.x / fb.size.x, screen.y / fb.size.y)
-			zoom = max(1, is_fullscreen() ? fs : (0 | fs))
+			zoom = fs;
 			tzoom = 0 | min((screen.x - (zoom * fb.size.x)) / (2 * toolsize.x), screen.y / toolsize.y)
 			const tz = tzoom * toolbars_enable
 			const c = q('#display'); c.width = fb.size.x * zoom, c.height = fb.size.y * zoom
